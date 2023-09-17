@@ -7,15 +7,12 @@ terraform {
   }
 }
 
-variable "ghcr_username" {}
-variable "ghcr_password" {} 
-
 
 provider "docker" {
   host = "unix:///var/run/docker.sock"
 
   registry_auth {
-    address  = "https://ghcr.i"
+    address  = "https://ghcr.io"
     username = var.ghcr_username
     password = var.ghcr_password
   }
